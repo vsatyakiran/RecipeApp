@@ -1,0 +1,261 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body{
+    background-color: rgb(253, 242, 242);    
+    text-align: center;
+}
+
+.bot{
+    position: fixed;
+    color: white;
+    bottom: 80px;
+    right: 60px;
+    width: 50px;
+    border-radius: 48%;
+    cursor: pointer;
+}
+
+header{
+    background-color: rgb(30, 29, 29);
+    padding: 20px;
+}
+
+header h1{
+    color: #ffff;
+    letter-spacing: 1px;
+    font-size: 30px;
+
+}
+header nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index:1;
+
+}
+
+header form input[type="text"], .searchBtn{
+    font-size: 15px;
+    /* font-weight: 700; */
+    border-radius: 4px;
+    border-style: none;
+    padding: 5px;
+    outline: none;
+    margin: 5px;
+    flex-grow: 1;
+}
+
+.searchBtn{
+    cursor: pointer;
+    background-color: rgb(207, 56, 56);
+    color: #ffff;
+    transition: 0.1s ;
+    flex-grow: 2;
+}
+header nav form{
+    display: flex;
+    /* justify-content: center; */
+
+
+}
+.maincontainer{
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 30px;
+    width: 80%;
+    margin: 30px auto;
+    place-items: center;
+
+}
+.heading{
+    color: #000000;
+}
+
+.card{
+    background-color: #ffff;
+    padding: 10px;
+    border-radius: 12px;
+    width: 300px;
+    cursor: pointer;
+    max-height: fit-content;
+    
+}
+.card img{
+    width: 280px;
+    border-radius: 12px;
+    height: 280px;
+}
+
+.card p{
+    /* color: #ffff; */
+    font-size: 15px;
+    font-weight: 500;
+    color: rgb(130, 126, 126);
+
+}
+
+.card h3{
+    margin: 10px;
+    font-size: 20px;
+    
+}
+.card .recipeBtn{
+    background-color: rgb(244, 18, 18);
+    padding: 6px;
+    font-size: 15px;
+    border-radius: 7px;
+    /* outline: none; */
+    /* border: none; */
+    font-weight: 600;
+    border: 1px solid black;
+    margin: 5px;
+    color: #ffff;
+    /* width: 80px; */
+    cursor: pointer;
+}
+
+.searchBtn:hover{
+    background-color: rgb(219, 70, 70);
+}
+.recipeBtn:hover{
+    background-color:  rgb(219, 41, 41);;
+}
+.card:hover{
+    box-shadow: 0 26px 58px 0 rgba(0, 0, 0, .22), 0 5px 14px 0 rgba(0, 0, 0, .18);
+}
+
+/* .recipeDetailsSticky{
+    position: sticky;
+    background-color: #000000;
+    display: flex;
+    top: 10px;
+    align-items: center;
+    width: 90%;
+
+} */
+.recipeDetails{
+    background-color:rgb(145, 102, 102) ;
+    width: 400px;
+    height: 350px;
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    color: #ffff;
+    /* keeping the content at the center */
+    transform: translate(-50%, -50%); 
+    -webkit-transform: translate(-50%, -50%);
+
+    /* border: 1px solid rgb(226, 188, 188); */
+    border-radius: 13px;
+    overflow: scroll;
+    padding: 20px;
+    padding-right: 30px;
+    box-shadow: 0 26px 58px 0 rgba(0, 0, 0, .22), 0 5px 14px 0 rgba(0, 0, 0, .18);
+    
+}
+::-webkit-scrollbar{
+    display: none;
+}
+
+/* PopUp CSS */
+.recipeDetails h3{
+    color: rgb(236, 199, 199);
+    text-decoration: underline;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: left;
+    
+}
+
+.crossIcon{
+    font-size: 20px;
+    position: fixed;
+    top: 5px;
+    right: 10px;
+    cursor: pointer;
+    background-color: #ececec;
+    color: #000000;
+    padding: 2px;
+    
+}
+
+.recipeName{
+    text-align: center;
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+    margin-top: 20px;
+    text-decoration: underline;
+    
+}
+
+.listofItems li{
+    list-style: none;
+    margin: 2px 0;
+    font-size: 15px;
+    text-align: left;
+    padding-left: 15px;
+
+}
+
+.instructions{
+    line-height: 1.3;
+    font-size: 15px;
+    text-align: justify;
+    padding-left: 15px;
+    white-space: pre-line;
+    /* margin-bottom: 20px; */
+}
+
+.instructionHead{
+    font-weight: 800;
+    color: rgb(236, 199, 199);
+    font-size: 20px;
+    margin: 10px 0;
+    text-align: left;
+    text-decoration: underline;
+}
+
+.youtube{
+    display: inline-block;
+    font-size: 15px;
+    cursor: pointer;
+    margin-top: 20px;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+.youtube span{
+    text-decoration: underline;
+}
+
+@media (max-width:650px){
+    header nav{
+        flex-direction: column;
+        flex-grow: 2;
+    }
+
+    .bot{
+        position: fixed;
+        color: white;
+        bottom: 80px;
+        right: 50%;
+        width: 40px;
+        border-radius: 48%;
+        cursor: pointer;
+    }
+
+    .recipeDetails{
+        width: 300px;
+        height: 300px;
+        padding: 10px;
+        padding-right: 20px;
+        
+    }
+}
